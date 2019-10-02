@@ -16,7 +16,10 @@ public class Seminario {
     public void print() {
         System.out.println("----------Relatorio de Seminario---------");
         System.out.println("Titulo" + this.titulo);
+        if (this.local != null)
         System.out.println("Professor palestrante : " + this.professor.getNome());
+        else
+            System.out.println("nenhum professor cadastrado para esse seminario");
         if (this.local != null)
             System.out.println("Local , rua " + this.local.getRua() + "Bairro" + this.local.getBairro());
         else
