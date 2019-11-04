@@ -6,12 +6,21 @@ public class Produto implements Comparable<Produto> {
     private  String serialNumber;
     private  String nome;
     private  Double preço;
+    private int quantidade;
+
 
     public Produto(String serialNumber, String nome, Double preço) {
         this.serialNumber = serialNumber;
         this.nome = nome;
         this.preço = preço;
 
+    }
+
+    public Produto(String serialNumber, String nome, Double preço, int quantidade) {
+        this.serialNumber = serialNumber;
+        this.nome = nome;
+        this.preço = preço;
+        this.quantidade = quantidade;
     }
 
     @Override
@@ -32,6 +41,7 @@ public class Produto implements Comparable<Produto> {
                 "serialNumber='" + serialNumber + '\'' +
                 ", nome='" + nome + '\'' +
                 ", preço=" + preço +
+                ", quantidade=" + quantidade +
                 '}';
     }
 
@@ -57,6 +67,14 @@ public class Produto implements Comparable<Produto> {
 
     public void setPreço(Double preço) {
         this.preço = preço;
+    }
+
+    public int getQuantidade() {
+        return quantidade;
+    }
+
+    public void setQuantidade(int quantidade) {
+        this.quantidade = quantidade;
     }
 
     @Override
